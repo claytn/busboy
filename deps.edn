@@ -1,0 +1,18 @@
+{:paths ["resources" "src"]
+ :deps
+        {org.clojure/clojure {:mvn/version "RELEASE"}
+         org.clojure/data.json {:mvn/version "1.0.0"}
+         ring                {:mvn/version "1.8.1"}
+         ring/ring-json      {:mvn/version "0.5.0"}
+         ring-json-logger/ring-json-logger {:mvn/version "0.1.0"}
+         compojure           {:mvn/version "1.6.2"}}
+ :aliases
+        {:dev  {:main-opts ["-m" "claytn.busboy"]}
+         :test {:extra-paths ["test"]
+                :extra-deps  {org.clojure/test.check {:mvn/version "RELEASE"}}}
+         :runner
+               {:extra-deps {com.cognitect/test-runner
+                             {:git/url "https://github.com/cognitect-labs/test-runner"
+                              :sha     "76568540e7f40268ad2b646110f237a60295fa3c"}}
+                :main-opts  ["-m" "cognitect.test-runner"
+                             "-d" "test"]}}}
