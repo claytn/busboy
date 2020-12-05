@@ -20,7 +20,7 @@ Create an edn file to represent your API data. For example:
 }
 ```
 
-This file will act as your local "database" and each key in the outer map will represent a REST route you can hit.
+This file will act as your local "database" and each key in the outer map will represent a REST endpoint you can hit.
 All API operations will read from and make updates to this file directly.
 
 Run busboy with your database file as the input:
@@ -51,7 +51,7 @@ Examples:
     $ curl -X DELETE localhost:3000/posts/1
 
 
-Run the project's tests (they'll fail until you edit them):
+Run the project's tests (...I haven't written any):
 
     $ clj -A:test:runner
     
